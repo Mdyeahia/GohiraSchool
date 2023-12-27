@@ -29,6 +29,10 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-LC/J9b5jU6ntDBA5zzjGJ8JpSj2ffPTCzfviFzrj5XRS2bxyF1i59D8oITcSzDZt" crossorigin="anonymous">
+
+
+
     <!-- Modernizer for Portfolio -->
     <script src="js/modernizer.js"></script>
 
@@ -40,7 +44,90 @@
 </head>
 <body class="host_version"> 
 
-	
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Alumni Registration</h4>
+			</div>
+			<div class="modal-body">
+			
+				<!-- Tab panes -->
+				<div class="tab-content">
+					
+					<div class="tab-pane active" id="Registration">
+    <form role="form" class="form-horizontal"  >
+        <div class="row" id="registrationForm">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="nameBangla">১। নাম (বাংলায়):</label>
+                    <input class="form-control" type="text" id="nameBangla" required>
+                </div>
+                <div class="form-group">
+                    <label for="motherName">৩। মাতার নাম:</label>
+                    <input class="form-control" type="text" id="motherName" required>
+                </div>
+                <div class="form-group">
+                    <label for="sscYear">৫। এসএসসি / ভর্তির সাল:</label>
+                    <input class="form-control" type="text" id="sscYear" required>
+                </div>
+                <div class="form-group">
+                    <label for="permanentAddress">৬। স্থায়ী ঠিকানা:</label>
+                    <textarea class="form-control" id="permanentAddress" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="idNumber">৮। জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন নং:</label>
+                    <input class="form-control" type="text" id="idNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="imageUpload">ছবি আপলোড:</label>
+                    <input type="file" class="form-control" id="imageUpload" accept="image/*">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="nameEnglish">২। পিতা/স্বামীর নাম:</label>
+                    <input class="form-control" type="text" id="nameEnglish" required>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate">৪। জন্ম তারিখ:</label>
+                    <input class="form-control" type="date" id="birthDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="currentAddress">৫। বর্তমান ঠিকানা:</label>
+                    <textarea class="form-control" id="currentAddress" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="phone">৭। ফোন নং / মোবাইল নং:</label>
+                    <input class="form-control" type="tel" id="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">৯। ই-মেইল:</label>
+                    <input class="form-control" type="email" id="email" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">							
+            <div class="col-sm-12">
+                <button type="button" id="printButton" class="btn btn-light btn-radius btn-brd grd1">
+                    Save & Print
+                </button>
+                <button type="button" class="btn btn-light btn-radius btn-brd grd1">
+                    Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
 
     <!-- LOADER -->
 	<div id="preloader">
@@ -72,12 +159,13 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Events </a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="blog-single.html">Registration</a>
-								<a class="dropdown-item" href="blog.html">Reunion 2014</a>
+								
+
+								<a class="dropdown-item" href="">Reunion 2014</a>
 							</div>
 						</li>
-						<li class="nav-item"><a class="nav-link" href="">Volunteer</a></li>
-						<li class="nav-item"><a class="nav-link" href="">About Us</a></li>
+						<li class="nav-item"><a class="nav-link" href="volunteer.html">Volunteer</a></li>
+							<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
 					</ul>
 					
 				</div>
@@ -101,11 +189,9 @@
 							<div class="row">
 								<div class="col-md-12 col-sm-12 text-right">
 									<div class="big-tagline">
-										<h2><strong>Gohira </strong> High School</h2>
-										<p class="lead">Chittagong Division, Bangladesh Chittagong, 4343 Bangladesh </p>
-											<a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-											<a href="#" class="hover-btn-new"><span>Read More</span></a>
+										<h2><strong>Gohira </strong> High School Alumni Association</h2>
+										<p class="lead">Reconect with your friend</p>
+											<a href="#" class="hover-btn-new" data-toggle="modal" data-target="#login"><span>Apply For New Membership</span></a>
 									</div>
 								</div>
 							</div><!-- end row -->            
@@ -152,17 +238,75 @@
 			</a>
 		</div>
 	</div>
-	
+
+	<section class="section lb page-section">
+		<div class="container">
+			 <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                	<p class="lead">We Together</p>
+                    <h3>Event Highlights</h3>
+                </div>
+            </div><!-- end title -->
+			<div class="timeline">
+				<div class="timeline__wrap">
+					<div class="timeline__items">
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-01">
+								<h2>2023, Feb 21</h2>
+								<h2>ঈদ আনন্দ উৎসব</h2>
+
+										<p>সময়ঃবিকেল ৩:৩০টা থেকে রাত ১০টা</p>
+									
+										<p>স্থানঃজিইসি কনভেনশান সেন্টার চট্টগ্রাম, বাংলাদেশ</p>
+
+									<ul class="nav navbar-nav navbar-right">
+                        <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Registration</span></a></li>
+                    </ul>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-02">
+								<h2>2022,  16 Dec</h2>
+								<p>In 2022, global events unfolded against a backdrop of ongoing challenges. The world continued to grapple with the effects of the COVID-19 pandemic</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-03">
+								<h2>2014</h2>
+								<p>In 2014, the world witnessed a range of significant events and developments. The Ebola virus outbreak in West Africa posed a major.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2>2012</h2>
+								<p>In 2014, the world witnessed a range of significant events and developments. The Ebola virus outbreak in West Africa posed a major.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-01">
+								<h2>2010</h2>
+								<p>In 2014, the world witnessed a range of significant events and developments. The Ebola virus outbreak in West Africa posed a major.</p>
+							</div>
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
     <div id="overviews" class="section wb">
         <div class="container">
             <div class="section-title row text-center">
                 <div class="col-md-8 offset-md-2">
-                    <h3>About</h3>
-                    <p class="lead">This prestigious school in the heart of Raozan Police Station in Chittagong is located in North Chittagong. Established in 1930, the school was founded through the initiative of the local youth society in the area, on land donated by the affluent local figure Abdul Jabbar Sahib.From the 6th to the 10th grade, approximately 900 students are studying in 5 classes and 13 sections in this school. The school consistently performs well in terms of results. Every time, 75% of the students pass the secondary examination. The school is meeting the educational needs of the general boys and girls in the surrounding area at a low cost</p>
+                   <p>Explore stories, views and perspectives from your alumni community.</p>
+                       <h3>Stories</h3>
                 </div>
             </div><!-- end title -->
         
+
             <div class="row align-items-center">
+
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="message-box">
                         
@@ -190,7 +334,7 @@
 				
 				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="message-box">
-                        <h2>Nostalgic remarks from former student.</h2>
+                        <h2>Nostalgic Remarks From Former Student.</h2>
                         <p>In the warm embrace of nostalgia, the 2014 reunion at Gahira A.J.W.M.S. Multidimensional High School was a heartwarming journey down memory lane. Alumni from various batches gathered with smiles and excitement, ready to reconnect with old friends and relive cherished moments.</p>
 
                         <p> The school grounds echoed with laughter and joy as former students explored the familiar corridors, classrooms, and the iconic landmarks that shaped their academic years. The air was filled with stories of shared experiences, unforgettable teachers, and the transformative journey each had taken since graduating.</p>
@@ -263,7 +407,7 @@
         <div class="container">
             <div class="footer-distributed">
                 <div class="footer-center">                   
-                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">SmartEDU</a> Design By : <a href="https://html.design/">html design</a></p>
+                   <p class="footer-company-name">All Rights Reserved. &copy; 2018 Design By : <a href="">SecretVeil</a></p>
                 </div>
             </div>
         </div><!-- end container -->
@@ -283,6 +427,7 @@
 			verticalStartPosition: 'left',
 			visibleItems: 4
 		});
+	
 	</script>
 </body>
 </html>
